@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonh Mendes - Projects</title>
+    <link rel="stylesheet" href="/css/projetos.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> --!!link dos butoes!!--
+    <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4cf6d58f03.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="search-bar">
+              <input type="text" placeholder="Search...">
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+            
+            <div id="circ">
+              <a href="#"></a>
+            </div>
+            
+            
+            <a href="/html/t1.html" class="close-btn"></a>
+        </nav>
+    </header>
+
+    <main>
+         
+        <h1 class="projects">Projects</h1>
+        <h2 class="by">By</h2>
+        <h2 class="JM">Jonh Mendes</h3>
+
+      <div class="container">
+
+        <div class="card">
+            <img src="/media/CARTIER2.jpg" alt="">
+            <span>01</span>
+        </div>
+
+        <div class="card">
+            <img src="/media/VC.jpg" alt="">
+            <span>02</span>
+        </div>
+
+        <div class="card">
+            <img src="/media/OJ.jpg" alt="">
+            <span>03</span>
+        </div>
+      </div>
+
+      <div class="btns">
+        <button class="prev"><i class="uil uil-angle-left"></i></button>
+        <button class="next"><i class="uil uil-angle-right"></i></button>
+
+      </div>
+
+    </main>
+    
+    <footer>
+    <a href="#">
+      <img src="/media/Instagram-2D.png" alt="#">
+    </a>
+
+    <a href="#">
+      <img src="/media/Linkedin-2D.png" alt="#">
+    </a>
+
+    <a href="#">
+      <img src="/media/Youtube-2D.png" alt="#">
+    </a>
+  </footer>
+
+    <script>
+         const slider = document.querySelectorAll('.card');
+         const prev = document.querySelector('.prev');
+         const next = document.querySelector('.next');
+
+        let currItem = 0;
+        function sliderShow(){
+                slider[currItem].style.transform = `translate(0, -50%)`;
+                slider[currItem].style.zIndex = 1;
+                slider[currItem].style.filter = "none";
+                slider[currItem].style.opacity = 1;
+
+
+            let counter = 0;
+            for (let i = currItem + 1; i < slider.length; i++){
+                counter++;
+                slider[i].style.transform = `translate(${160 * counter}px, -50%) scale(${1-.2*counter}) perspective(20px) rotateY(-1deg)`;
+                slider[i].style.zIndex = `${-counter}`;
+                slider[i].style.filter = "brightness(70%)";
+                slider[i].style.opacity = counter > 2 ? 0 : 1;
+            }
+            counter = 0;
+            for (let i = currItem - 1; i >=0; i--){
+                counter++;
+                slider[i].style.transform = `translate(${-160 * counter}px, -50%) scale(${1-.2*counter}) perspective(20px) rotateY(-1deg)`;
+                slider[i].style.zIndex = `${-counter}`;
+                slider[i].style.filter = "brightness(70%)";
+                slider[i].style.opacity = counter > 2 ? 0 : 1;
+            }
+        }
+        sliderShow();
+
+        next.onclick = () =>{
+            if(currItem != 3){
+                currItem++;
+                sliderShow();
+            }
+        }
+
+        prev.onclick = () =>{
+            if(currItem != 0){
+                currItem--;
+                sliderShow();
+            }
+        }
+      </script>
+      
+</body>
+</html>

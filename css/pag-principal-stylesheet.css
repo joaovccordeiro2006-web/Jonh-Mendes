@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-de-fundo: #F4E1D2;
+}
+
+.barra-menu {
+    background-color: var(--cor-de-fundo);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top:0;
+    z-index: 9999;
+}
+
+.barra-menu nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 3rem;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin-left: 22rem;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 520;
+    color: black;
+}
+
+.barra-menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.barra-menu ul li a:hover {
+    transform: scale(1.2);
+
+}
+
+.barra-menu ul li {
+    margin: 23px;
+
+}
+
+.logo {
+    width: 90px;
+}
+
+body {
+    margin: 0vh;
+    background-color: var(--cor-de-fundo);
+}
+
+main video {
+    width: 900px;
+    display: flex;
+    margin: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+#esq,
+#dir {
+    background-repeat: no-repeat;
+    background-size: 27%;
+}
+
+
+#esq {
+    background-image: url(/media/Grelha-Perspectiva.png);
+    background-position: left center;
+}
+
+#dir {
+    background-image: url(/media/Grelha-Perspectiva\ -\ invertida.png);
+    background-position: right center;
+    padding: 220px 0;
+}
+
+#rect { 
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    box-shadow: 0 0 15px;
+    background-color: #F4E1D2;
+}
+
+#circ a {
+    border:none;
+    background: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+#pop {
+    width: 100vw;
+    height: 90vh
+}
+
+#circ {
+    position: relative;
+    top: -18px;
+    width: 65px;
+    height: 65px;
+    background-color: #F4E1D2;
+    border-radius: 50%;
+    box-shadow: 0 0 10px;
+    background-image: url("/media/Logotipo.png");
+    background-repeat: no-repeat;
+    background-size: 65px 65px ;
+    background-position: center center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+.WELCOME{
+    display: flex;
+    justify-content: center;
+    font-size: 90px ;
+    font-family: "Lato", sans-serif;
+    transition-duration: 0.8s;
+}
+
+.WELCOME:hover{
+    color: #6E493A;
+
+}
+
+
+.Second{
+    display: flex;
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.carousel{
+    margin: 80px auto;
+    border: none;
+    display: flex;
+    align-content: center;
+    height: 500px;
+    width: 95vw;
+    overflow-x: auto;
+    overflow-y: none;
+    gap: 5em;
+    padding: 3vh;
+
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.group{
+    display:flex;
+    align-content: center;
+    gap: 5em;
+    animation: spin 8s infinite linear;
+}
+
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
+
+
+.card-one{
+    background-image: url(/media/jonh-1.png);
+    background-position: 90em;
+    height: 20%;
+    padding: 10em;
+    border-radius: 10%;
+    box-shadow: 0 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.card-one:hover {
+    transform: scale(1.05);            /* aproxima o cartão */
+    filter: brightness(1.2);           /* realça */
+}
+
+.card-two{
+    background-image: url(/media/jonh-2.jpg);
+    background-size: 100%;
+    height: 20%;
+    padding: 10em;
+    border-radius: 10%;
+    box-shadow: 0 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.card-two:hover {
+    transform: scale(1.05);            /* aproxima o cartão */
+    filter: brightness(1.2);           /* realça */
+}
+
+.card-three{
+    background-image: url(/media/jonh-3.jpg);
+    background-size: 100%;
+    height: 20%;
+    padding: 10em;
+    border-radius: 10%;
+    box-shadow: 0 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.card-three:hover {
+    transform: scale(1.05);            /* aproxima o cartão */
+    filter: brightness(1.2);           /* realça */
+}
+
+
+.card-four{
+    background-image: url(/media/jonh-4.jpg);
+    background-size: 100%;
+    height: 20%;
+    padding: 10em;
+    border-radius: 10%;
+    box-shadow: 0 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.card-four:hover {
+    transform: scale(1.05);            /* aproxima o cartão */
+    filter: brightness(1.2);           /* realça */
+}
+
+
+.card-five{
+    background-image: url(/media/jonh-5.jpg);
+    background-size: 100%;
+    height: 20%;
+    padding: 10em;
+    border-radius: 10%;
+    box-shadow: 0 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.card-five:hover {
+    transform: scale(1.05);            /* aproxima o cartão */
+    filter: brightness(1.2);           /* realça */
+}
+
+
+main{
+    background-image: url(/media/Circle.png);
+    background-repeat: no-repeat;
+    background-position: center 1108px;
+    background-size: 600px;
+
+}
+
+.MAM-Button{
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem 5rem;    
+  font-size:25px;
+  font-weight: 600;
+  color: #f4e1d2; 
+  border: none;          
+  background: #000000;       
+  border-radius: 35px;        
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin-left: 40.5%;
+  margin-top: -5vh;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.MAM-Button:hover {
+  background: rgba(255, 255, 255, 0.10);       /* transparente */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* borda de vidro */
+
+  backdrop-filter: blur(12px);                 /* vidro real */
+  -webkit-backdrop-filter: blur(12px);
+
+  color: #000;                                 /* texto escuro */
+  transform: translateY(-6px);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+.WHOS{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    margin-right: 670px;
+    margin-top: 100px;
+    font-size: 120px;
+}
+
+.JONH{
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    font-size: 100px;
+
+}
+
+.INTERROGATION{
+    display: flex;
+    justify-content: center;
+    margin-left: 620px;
+    font-family: "Lato", sans-serif;
+    font-weight: 200;
+    font-size: 150px;
+    font-style: italic;
+    margin-top: -150px;
+}
+
+.JONHPNG{
+    display: flex;
+    justify-content: right;
+    scale: calc(120%);
+    padding: 0 1050px;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    width: 900px;
+    margin-left: 25vw;
+    margin-top: -400px;
+}
+
+
+h3{
+    display:flex;
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-right: 15vw;
+    margin-top: 50px;
+}
+
+.contact-btn{
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem 5rem;    
+  font-size:25px;
+  font-weight: 600;
+  color: #f4e1d2; 
+  border: none;          
+  background: #000000;       
+  border-radius: 35px;        
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin-left: 25vw;
+  margin-top: 100px;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.contact-btn:hover {
+  background: rgba(255, 255, 255, 0.10);       /* transparente */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* borda de vidro */
+
+  backdrop-filter: blur(12px);                 /* vidro real */
+  -webkit-backdrop-filter: blur(12px);
+
+  color: #000;                                 /* texto escuro */
+  transform: translateY(-6px);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+footer{
+    display:flex;
+    justify-content: left;
+    background-color: #2B1C1033;
+    margin-top: 102px;
+    align-items: center;
+    gap: 0px;
+    padding: 0 450px;
+    
+}
+
+footer img{
+    width: 50px;
+    padding: 30px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+footer img:hover{
+    transform: translateY(-6px);
+}
+
+

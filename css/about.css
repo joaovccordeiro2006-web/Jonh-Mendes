@@ -412,6 +412,50 @@ img:hover{
     filter: brightness(1.1);
 }
 
+/* aqui acaba os textos e imagens*/
+
+li{
+    list-style: none;
+}
+
+.container-logos{
+    background-color: aliceblue;
+    width: 100vw;
+}
+
+.logos{
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.logos ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: 20s infinite slide linear;
+}
+
+.logos img{
+    width: 150px;
+    filter: grayscale(90%);
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-1140px);
+    }
+}
+
+.logos ul:hover{
+
+}
+
+
 
 
 

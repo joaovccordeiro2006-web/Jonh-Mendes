@@ -236,7 +236,7 @@ img:hover{
   justify-content: center; /* centraliza horizontalmente */
   width: 100vw;         /* largura da caixa */
   padding: 100px ;
-  height: 1000px;
+  height: 500px;
 }
 
 .FONE{
@@ -245,7 +245,7 @@ img:hover{
     margin-right: 10vw;
     width: 650px;
     
-          opacity: 0;
+    opacity: 0;
     transform: translateX(0);
 
     animation: descer 1s ease-out both;
@@ -318,6 +318,103 @@ img:hover{
     font-size: 20px;
     font-style: italic;
 }
+
+/* aqui começa os textos e imagens*/
+
+.barra-vertical{
+    width: 3px;        /* largura fina */
+    height: 2200px;     /* comprimento vertical */
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.images-and-txts{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: var(--cor-de-fundo);
+    font-family:"Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.IMG-CL-1{
+    display: flex;
+    flex-direction:column;
+    gap: 150px;
+}
+
+.image-mark-one{
+    width: 295px;
+    height: 215px;
+}
+
+
+.txt-2{
+    width: 230px;
+    height: 200px;  
+}
+
+.txt-1{
+    width: 300px;
+}
+
+.IMG-CL-2{
+    display: flex;
+    flex-direction:column;
+    gap: 150px;
+}
+
+.RIOT{
+    width: 240px;
+}
+
+.txt-3{
+    width: 300px;
+}
+
+.AMMUN{
+    height: 210px;
+    width: 300px;
+}
+
+.txt-4{
+    width: 230px;
+    height: 200px;  
+}
+
+.txt-5{
+    width: 300px;
+}
+
+.CARTIER-BRACELET{
+    width: 290px;
+    height: 190px;
+}
+
+.txt-6{
+    width: 230px;
+    height: 200px;
+}
+
+.VACH{
+    width: 300px;
+    height: 100px;
+    margin-top: 35%;
+}
+
+.FS{
+    transition: 0.3s;
+}
+
+.FS:hover{
+    transform: translateY(-10px);
+    filter: brightness(1.1);
+}
+
+
+
+
 
 
 

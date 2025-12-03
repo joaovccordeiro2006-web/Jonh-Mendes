@@ -84,12 +84,12 @@ main video {
 
 
 #esq {
-    background-image: url(/media/Grelha-Perspectiva.png);
+    background-image: url(media/Grelha-Perspectiva.png);
     background-position: left center;
 }
 
 #dir {
-    background-image: url(/media/Grelha-Perspectiva\ -\ invertida.png);
+    background-image: url(media/Grelha-Perspectiva\ -\ invertida.png);
     background-position: right center;
     padding: 220px 0;
 }

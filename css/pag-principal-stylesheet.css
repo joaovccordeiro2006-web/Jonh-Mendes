@@ -81,6 +81,8 @@ main video {
 #dir {
     background-repeat: no-repeat;
     background-size: 27%;
+    width: 100%;
+    height: 500px; /* define altura mínima para a imagem aparecer */
 }
 
 

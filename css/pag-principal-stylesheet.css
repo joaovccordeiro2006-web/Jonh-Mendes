@@ -89,7 +89,7 @@ main video {
 }
 
 #dir {
-    background-image: url("/media/grelha-perspectiva\ -\ invertida.png");
+    background-image: url("../media/Grelha-Perspectiva\ -\ invertida.png");
     background-position: right center;
     padding: 220px 0;
 }

@@ -249,10 +249,10 @@ footer{
 }
 
 .column-2{
-  display: flex;
-  font-family:"Lato", sans-serif; 
-  font-weight: 400;
-  gap: 50px;
+   display: flex;
+   font-family:"Lato", sans-serif; 
+   font-weight: 400;
+   gap: 50px;
 }
 
 footer div span{

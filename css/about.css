@@ -519,21 +519,21 @@ li{
 }
 
 .logos{
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow-x: hidden;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow-x: hidden;
 }
 
 .logos ul{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    animation: 20s infinite slide linear;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      animation: 20s infinite slide linear;
 }
 
 .logos img{
-    width: 120px;
-    filter: invert(1);
+      width: 120px;
+      filter: invert(1);
 }
 
 @keyframes slide{

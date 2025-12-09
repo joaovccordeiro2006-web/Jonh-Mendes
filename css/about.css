@@ -538,11 +538,11 @@ li{
 
 @keyframes slide{
     from{
-        transform: translateX(0);
+         transform: translateX(0);
     }
 
     to{
-        transform: translateX(-1140px);
+         transform: translateX(-1140px);
     }
 }
 

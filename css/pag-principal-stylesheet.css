@@ -14,7 +14,7 @@ body{
 .barra-menu {
     background-color: var(--cor-de-fundo);
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,12 +84,12 @@ main video {
 
 
 #esq {
-    background-image: url(media/Grelha-Perspectiva.png);
+    background-image: url(/media/Grelha-Perspectiva.png);
     background-position: left center;
 }
 
 #dir {
-    background-image: url(media/Grelha-Perspectiva\ -\ invertida.png);
+    background-image: url(/media/Grelha-Perspectiva\ -\ invertida.png);
     background-position: right center;
     padding: 220px 0;
 }
@@ -305,6 +305,10 @@ main{
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.MAM-LINK{
+    text-decoration: none;
+}
+
 .MAM-Button:hover {
   background: rgba(255, 255, 255, 0.10);       /* transparente */
   border: 1px solid rgba(255, 255, 255, 0.25); /* borda de vidro */
@@ -409,16 +413,23 @@ h3{
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
 }
 
+.CONTACT_LINK{
+    text-decoration: none;
+}
+
 
 footer{
     display:flex;
-    justify-content: left;
+    flex-direction: column;  
     background-color: #2B1C1033;
     margin-top: 102px;
     align-items: center;
     gap: 0px;
     padding: 0 450px;
-    
+    padding-bottom: 60px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    position: block; 
 }
 
 footer img{
@@ -430,6 +441,25 @@ footer img{
 
 footer img:hover{
     transform: translateY(-6px);
+    filter: invert(1);
+}
+
+.column-1{
+    display: flex;
+    margin-right: 650px;
+    position: block;
+}
+
+.column-2{
+    display: flex;
+    justify-content: flex-start;
+    gap: 70px;
+    font-family: "Lato", sans-serif;
+    margin-right: 60px;
+}
+
+p span{
+    font-weight: 600;
 }
 
 

@@ -121,7 +121,7 @@ nav{
     padding: 10px 20px;
     border-radius: 60px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
-    transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;  
 }
 
 .search-bar input{
@@ -241,9 +241,22 @@ button:active{
 
 footer{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #2B1C1033;
     align-items: center;
+    padding-bottom: 50px;
+}
+
+.column-2{
+  display: flex;
+  font-family:"Lato", sans-serif; 
+  font-weight: 400;
+  gap: 50px;
+}
+
+footer div span{
+  font-weight: 600;
 }
 
 footer img{
@@ -255,9 +268,12 @@ footer img{
 
 footer img:hover{
     transform: translateY(-6px);
+    filter: invert(1);
 }
 
 body {
     margin: 0vh;
     background-color: var(--cor-de-fundo);
 }
+
+

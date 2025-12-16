@@ -232,13 +232,15 @@ img:hover{
 
 }
 
+
+
 .text-one {
   background-color: var(--cor-de-fundo);
   display: flex;         /* ativa flexbox */
   flex-direction: row;   /* organiza horizontalmente */
   flex-wrap: wrap;       /* permite quebrar para a próxima linha */
   justify-content: center; /* centraliza horizontalmente */
-  width: 1800px;         /* largura da caixa */
+  width: 100vw;         /* largura da caixa */
   padding: 100px ;
   height: 500px;
 }

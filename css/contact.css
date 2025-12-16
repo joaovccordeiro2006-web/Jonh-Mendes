@@ -271,11 +271,12 @@ footer img{
     filter: invert(1);
     width: 50px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 footer img:hover{
     filter: opacity(98%);
-    transform: scale(1.2);
+    transform: translateY(-6px);
 }
 
 footer p{

@@ -69,10 +69,13 @@ body {
     background-color: var(--cor-de-fundo);
 }
 
+/* Atualize o CSS para isso: */
 main video {
-    width: 900px;
-    display: flex;
-    margin: auto;
+    width: 90%; 
+    max-width: 900px; 
+    height: auto; 
+    display: block; 
+    margin: 40px auto; 
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -84,7 +87,7 @@ main video {
 
 
 #esq {
-    background-image: url("Jonh-Mendes/media/grelha-perspectiva.png");
+    background-image: url("/media/grelha-perspectiva.png");
     background-position: left center;
 }
 
@@ -193,6 +196,7 @@ header {
     from{translate: 0;}
     to{translate: -100%;}
 }
+
 
 
 .card-one{
@@ -355,21 +359,21 @@ main{
 
 .JONHPNG{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end; /* Alinha o conteúdo à direita dentro do container pai */
     scale: calc(120%);
-    padding: 0 1050px;
+    margin-left: 55vw; 
 }
 
 .text{
     display: flex;
-    justify-content: center;
     font-family: "Lato", sans-serif;
     font-size: 40px;
-    width: 900px;
-    margin-left: 25vw;
+    width: 90%; 
+    max-width: 900px; 
     margin-top: -400px;
+    margin-left: 25vw; 
+    margin-right: 25vw; 
 }
-
 
 h3{
     display:flex;
@@ -377,7 +381,7 @@ h3{
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 20px;
-    margin-right: 15vw;
+    margin-right: 14vw;
     margin-top: 50px;
 }
 
@@ -425,7 +429,6 @@ footer{
     margin-top: 102px;
     align-items: center;
     gap: 0px;
-    padding: 0 450px;
     padding-bottom: 60px;
     font-family: "Lato", sans-serif;
     font-weight: 500;
@@ -446,8 +449,7 @@ footer img:hover{
 
 .column-1{
     display: flex;
-    margin-right: 650px;
-    position: block;
+    padding-right: 650px;
 }
 
 .column-2{
@@ -455,11 +457,21 @@ footer img:hover{
     justify-content: flex-start;
     gap: 70px;
     font-family: "Lato", sans-serif;
-    margin-right: 60px;
+    padding-right: 65px;
 }
 
 p span{
     font-weight: 600;
 }
+
+@media screen and (max-width: 585px){
+
+    ul{
+        display: none;
+    }
+    
+}
+
+
 
 

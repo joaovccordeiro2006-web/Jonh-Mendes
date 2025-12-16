@@ -11,7 +11,11 @@
 
 body{
     background: url(/media/BG-2-Contact.jpg) no-repeat;
-    background-size: 100%;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    
 }
 
 header{
@@ -259,6 +263,7 @@ footer{
 .column-2{
     display: flex;
     gap: 50px;
+    font-weight: 400;
 
 }
 
@@ -278,4 +283,90 @@ footer p{
 
 p span{
     font-weight: 800;
+}
+
+@media screen and (min-height: 1223px){
+    footer{
+        padding-bottom: 120px;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+    nav{
+        gap:600px;
+    }
+
+    .column-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper{
+        width: 600px;
+    }
+}
+
+@media screen and (min-width:1442px){
+    .contentor-contact{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    
+}
+
+/* Media Query para telas com largura MÁXIMA de 768px */
+@media (max-width: 768px) {
+    nav{
+        gap: 200px;
+        margin-left: 250px;
+    }
+
+}
+
+@media screen and (max-width: 675px){
+    .wrapper{
+        width: 520px;
+    }
+ 
+}
+
+@media screen and (max-width: 600px){
+    .wrapper{
+        width: 350px;
+    }
+
+    nav{
+        gap: 100px;
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .cntc{
+        scale: calc(0.8);
+    }
+
+    .Column-1{
+        gap:50px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .wrapper{
+        width: 280px;
+    }
+
+    nav{
+        gap: 70px;
+        margin-left: 120px;
+    }
+
+}
+    
+@media screen and (min-height:1373px){
+    footer{
+        margin-top: 300px;
+    }
 }

@@ -275,6 +275,7 @@ footer img{
 
 footer img:hover{
     filter: opacity(98%);
+    transform: scale(1.2);
 }
 
 footer p{

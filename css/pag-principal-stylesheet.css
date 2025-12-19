@@ -374,12 +374,11 @@ main{
     justify-content: center; 
     font-family: "Lato", sans-serif;
     font-size: 40px;
-    margin-top: -400px;
-    width: 1000px; 
-    padding-left: 160px;
-    text-align: left; 
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%; /* Ocupa 90% da tela em dispositivos pequenos */
+    max-width: 1000px; /* Não passa de 1000px em telas grandes */
+    margin: -400px auto 0 auto; /* Centraliza automaticamente */
+    padding-left: 0; /* Remova o padding fixo lateral */
+    text-align: center; /* Melhora a leitura em telas menores */
 }
 
 h3{
@@ -390,7 +389,7 @@ h3{
     font-size: 20px;
     margin-right: 14vw;
     margin-top: 50px;
-    padding-right: 160px;
+    padding-right: 180px;
     text-align: left; 
     margin-left: auto;
     margin-right: auto;
@@ -514,12 +513,57 @@ p span{
         overflow-x: none;
     }
 
-    .text{
-        width: 600px;
+    .column-1{
+        padding-right: 0px;
     }
 
-    .column-1{}
+    .column-2{
+        padding-right: 0px;
+    }
+
+    main video{
+        max-width: 700px;
+
+    }
+
+    footer{
+        position: block;
+    }
+
+    nav ul{
+        margin-left: 10em;
+    }
     
+}
+
+@media screen and (max-width:1024px){
+    .text{
+        text-align: left;
+        margin: center center;
+        width: 800px;
+        
+    }
+
+    h3{
+        text-align: left;
+        margin: center center;
+        padding-left: 50px;
+    }
+
+    footer{
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+
+    .JONHPNG{
+        transform: scale(0.7);
+    }
+
+    .CONTACT_LINK{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
 }
 
 

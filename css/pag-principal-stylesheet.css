@@ -79,22 +79,46 @@ main video {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
-#esq,
-#dir {
+/* Container pai */
+#esq {
+    position: relative; /* Necessário para posicionar o fundo */
+    overflow: hidden;   /* Esconde sobras da imagem rodada */
+}
+
+/* Criamos uma camada de fundo para a Grelha Esquerda */
+#esq::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../media/Grelha-Perspectiva.png);
     background-repeat: no-repeat;
     background-size: 27%;
-}
-
-
-#esq {
-    background-image: url(../media/Grelha-Perspectiva.png);
     background-position: left center;
+    z-index: -1; /* Fica atrás do vídeo */
+    transition: transform 0.6s ease; /* Animação suave */
 }
 
+/* Camada de fundo para a Grelha Direita (se ainda quiser usar) */
 #dir {
-    background-image: url(../media/Grelha-Perspectiva-invertida.png);
-    background-position: right center;
+    background-image: none; /* Removemos do elemento principal */
     padding: 220px 0;
+}
+
+#dir::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../media/Grelha-Perspectiva-invertida.png);
+    background-repeat: no-repeat;
+    background-size: 27%;
+    background-position: right center;
+    z-index: -1;
 }
 
 #rect { 
@@ -189,6 +213,7 @@ header {
     align-content: center;
     gap: 5em;
     animation: spin 8s infinite linear;
+    
 }
 
 @keyframes spin{
@@ -378,7 +403,9 @@ main{
     max-width: 1000px; /* Não passa de 1000px em telas grandes */
     margin: -400px auto 0 auto; /* Centraliza automaticamente */
     padding-left: 0; /* Remova o padding fixo lateral */
-    text-align: center; /* Melhora a leitura em telas menores */
+    text-align: left; /* Melhora a leitura em telas menores */
+    margin: center center;
+    padding-left: 150px;
 }
 
 h3{
@@ -536,6 +563,14 @@ p span{
     
 }
 
+@media screen and (max-width:1171px){
+    .text{
+        text-align: center;
+        padding-left: 0;
+    }
+
+}
+
 @media screen and (max-width:1024px){
     .text{
         text-align: left;
@@ -556,14 +591,409 @@ p span{
     }
 
     .JONHPNG{
-        transform: scale(0.7);
+        transform: scale(1.33);
     }
 
-    .CONTACT_LINK{
+    .contact-btn{
+        margin-top: 100px;
+    }
+
+    .contentor-main{
+        transform: scale(0.8);
+    }
+
+    footer{
+        padding-bottom: 100px;
+    }
+}
+
+/* Garanta que o seletor seja idêntico ao que está no HTML */
+@media screen and (max-width: 957px) {
+  img.JONHPNG, 
+  .JONHPNG {
+    display: none !important;
+  }
+
+  .text{
+    padding-top: 400px;
+  }
+
+  .WHOS{
+    margin-top: 0px;
+  }
+
+  .column-2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .CONTACT_LINK{
+    margin: 0px;
+  }
+
+}
+
+@media screen and (max-width: 892px) {
+
+    h3{
+        padding-right: 0;
+    }
+
+    .text{
+       text-align: center;
+       font-size: 30px;
+       padding-top: 430px;
+    }
+    
+}
+
+@media screen and (max-width: 858px) {
+    .WHOS {
+        margin-right: 0px;
+        padding-bottom: 30px;
+    }
+
+    .JONH{
+        margin-left: 0px;
+    }
+
+    .INTERROGATION{
+        margin-left: 0px;
+        padding-left: 600px;
+    }
+
+    .text{
+        width: 700px;
+    }
+}
+
+/* Esconder o checkbox e o botão por padrão (Desktop) */ 
+#menu-check, .menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .carousel{
+        transform: scale(0.9);
+        
+    }
+
+    .MAM-Button{
+        padding: 1.1rem 3rem; 
+        font-size: 22px;
+        margin-top: -5vh;
+    }
+
+
+    /* Roda apenas a imagem de fundo da esquerda */
+    #esq::before {
+        transform: rotate(90deg) scale(2.3) rotateX(150deg); /* Scale evita bordas vazias */
+        background-position: center; /* Centraliza para a rotação ficar bonita */
+        margin-top: -300px;
+    }
+
+    /* Se quiser rodar a da direita também: */
+    #dir::before {
+        transform: rotate(90deg) scale(2) rotateX(150deg);
+        background-position: center;
+        margin-top: 100px;  
+    }
+
+    /* O vídeo permanece reto automaticamente pois não foi afetado */
+    main video {
+        width: 90% !important; 
+        max-width: 900px !important; /* Mantém o limite que tinhas no desktop */
+        height: auto; 
+        display: block; 
+        margin: 40px auto !important; /* Centraliza e mantém o espaçamento constante */
+        position: relative;
+
+    }
+
+    .carousel{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    main{
+        background-position: center 890px;
+
+    }
+
+    .contact-btn{
+        margin-top: 80px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 7px; 
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 10001;
+    }
+
+    .bar {
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        border-radius: 2px;
+        /* Suaviza a transformação para a cruz */
+        transition: transform 0.4s ease, opacity 0.2s ease;
+    }
+
+    .barra-menu ul {
+        display: flex; 
+        flex-direction: column;
+        position: absolute;
+        top: 10vh; 
+        left: 0;
+        width: 100vw;
+        background-color: var(--cor-de-fundo);
+        margin-left: 0;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 15px 10px rgba(0,0,0,0.1);
+
+        /* Estado inicial para animação */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.4s ease-in-out;
+        pointer-events: none;
+    }
+
+    .barra-menu ul li {
+        margin: 15px 0;
+    }
+
+    /* 3. Lógica do Checkbox: Ativar Menu */
+    #menu-check:checked ~ ul {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* 4. Transformar traços em CRUZ */
+    #menu-check:checked ~ .menu-toggle .bar:nth-child(1) {
+        /* Move o primeiro traço para o centro e gira 45 graus */
+        transform: translateY(4.5px) rotate(45deg);
+    }
+
+    #menu-check:checked ~ .menu-toggle .bar:nth-child(2) {
+        /* Move o segundo traço para o centro e gira -45 graus */
+        transform: translateY(-4.5px) rotate(-45deg);
+    }
+
+    /* 5. Ajuste do NAV */
+    .barra-menu nav {
+        width: 90%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    footer{
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 625px){
+
+    .text{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .INTERROGATION{
+        padding-left: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -280px;
+        transform: scale(1);
+    }
+
+    .JONH{
         display: flex;
         justify-content: center;
         margin-bottom: 100px;
+        transform: scale(0.8);
     }
+
+    h3{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 545px){
+    .WELCOME{
+        font-size: 60px;
+    }
+
+    #dir{
+        padding-bottom: 100px;
+    }
+
+    #dir::before {
+        transform: rotate(90deg) scale(2) rotateX(150deg);
+        background-position: center;
+        margin-top: 200px;  
+    }
+
+    #esq::before {
+        margin-top: -200px;
+    }
+    
+    .JONH{
+        font-size: 80px;
+        margin-top: -50px;
+    }
+
+    .INTERROGATION{
+        width: 95%;
+        margin-top: -270px;
+    }
+
+    main{
+        background-position: center 740px;
+    }
+}
+
+@media screen and (max-width: 465px){
+
+    .Second{
+        transform: scale(0.8);
+
+    }
+
+    .INTERROGATION{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 436px){
+    .JONH{
+        text-align: center;
+        transform: scale(1);
+    }
+
+    .WHOS{
+        transform: scale(0.8);
+    }
+    
+}
+
+@media screen and (max-width: 465px){
+    .Second{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 425px){
+    .INTERROGATION{
+        width: 95%;
+    }
+
+    h3{
+        padding-left: 0px;
+    }
+
+    #dir::before{
+        margin-top: 200px ;
+    }
+
+    #esq::before {
+        /* Aumenta o valor negativo para subir, diminui ou torna positivo para baixar */
+        margin-top: -200px !important; 
+        
+        /* Se preferires usar a posição absoluta: */
+        top: 50px !important;
+    }
+
+    main video {
+        margin-top: -85px !important; /* Valor negativo puxa para cima */
+        margin-bottom: 10px !important;
+    }
+
+    /* O container 'esq' ou 'dir' pode ter padding excessivo */
+    #dir {
+        padding-top: 300px !important; /* Reduzi o padding que estava em 220px */
+    }
+
+    /* Ajusta a posição do círculo de fundo para acompanhar a subida */
+    main {
+        background-position: center 700px !important; 
+    }
+    
+}
+
+@media screen and (max-width: 375px){
+    .INTERROGATION{
+        width: 100%;
+    }
+
+    #esq::before {
+        /* Aumenta o valor negativo para subir, diminui ou torna positivo para baixar */
+        margin-top: -150px !important; 
+        
+        /* Se preferires usar a posição absoluta: */
+        top: 50px !important;
+    }
+
+    .WELCOME{
+        transform: scale(0.9);
+    }
+
+    main{
+        background-position: center 630px !important ;
+        background-size: 600px;
+    }
+
+
+    .MAM-LINK{
+        margin-top: 20px;
+    }
+
+    .JONH{
+        transform: scale(0.7);
+    }
+
+    .WHOS{
+        padding-bottom: 0px;
+        scale: calc(0.8);
+    }
+
+    .INTERROGATION{
+        scale: calc(0.8);
+    }
+
+    .text{
+        padding-top: 0px;
+    }
+
+    .column-1{
+        scale: calc(0.8);
+    }
+
+}
+
+@media screen and (max-width:319px){
+
+    .column-1{
+        scale: calc(0.7);
+    
+    }
+    
 }
 
 
